@@ -10,13 +10,15 @@ object App {
     val conf = new SparkConf().setAppName("Kmeans_HistoricLoad")
     val sc = new SparkContext(conf)
 
+    // Echa one of these have to be in different jars files to be separated and executed
+    
 //    KMeansStreamingDataSet.KmeansStreamingDataSet(sc)
 //    KmeansOptimalK.getElbowPoints(sc)
 //    KmeansLearning.learning(sc, args(0).toInt, args(1).toInt)
-//    KMeansPrediction.KmeansPredictionStreaming(sc)
+    KMeansPrediction.KmeansPredictionStreaming(sc)
 
     // EXTRAS
-    HistoryLoad.load(sc)
+//    HistoryLoad.load(sc)
 //    KmeansAnomalyTest.load(sc, args(0).toInt, args(1).toInt)
   }
 }
